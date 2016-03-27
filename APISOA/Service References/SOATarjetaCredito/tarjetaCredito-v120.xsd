@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqActualizaTarjetaBatch">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataActualizaTarjetaBatchReq" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespActualizaTarjetaBatch">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataActualizaTarjetaBatchResp" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataActualizaTarjetaBatchReq">
+    <xsd:sequence>
+      <xsd:element name="CodigoMarca">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="CodigoEntidad">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="3" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="NumCuentaSocio">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="CodTipoNovedad">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="4" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodProdNuevo">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="10" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ImportLimNuevo">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="9" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PorceMod">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="3" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SignoMod">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodFormaPago">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodTipoDebito">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodSucBco">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="3" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodTipoCtaBcaria">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="NumCtaBcaria">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="15" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodGrupAfinidad">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="6" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodModLiquidacion">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="6" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PorcBonfPeriodo">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodGrupCtaCte">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CuotasServicio">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PorLimAdelantado">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MantieneBonf">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MarcaHabATM">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CodLimPre">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="FechaEfectiva" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataActualizaTarjetaBatchResp">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTX" type="xsd:string" />
+            <xsd:element name="Estado" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

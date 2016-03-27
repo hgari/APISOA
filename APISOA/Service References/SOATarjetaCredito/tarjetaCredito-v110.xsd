@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaDetalle-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaDetalle-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqConsultaDetalle">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaDetalleReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespConsultaDetalle">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaDetalleRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataConsultaDetalleReqType">
+    <xsd:sequence>
+      <xsd:element name="identificador" type="ns1:IdTarjetaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataConsultaDetalleRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="identificador" type="ns1:IdTarjetaType" />
+            <xsd:element name="numeroTarjeta" type="xsd:string" />
+            <xsd:element name="tipo" type="ns1:codDescStringType" />
+            <xsd:element name="numeroCuenta" type="xsd:string" />
+            <xsd:element name="tipoCuenta" type="xsd:string" />
+            <xsd:element name="digitoVerifCuenta" type="xsd:string" />
+            <xsd:element name="saldoActual">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="saldoPesos" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" name="saldoDolares" type="xsd:decimal" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="saldoAnterior">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="saldoPesos" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" name="saldoDolares" type="xsd:decimal" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="pagoMinimo" type="xsd:decimal" />
+            <xsd:element minOccurs="0" name="fechaCierreAnterior" type="xsd:date" />
+            <xsd:element minOccurs="0" name="fechaCierreActual" type="xsd:date" />
+            <xsd:element minOccurs="0" name="fechaCierreProximo" type="xsd:date" />
+            <xsd:element minOccurs="0" name="fechaVtoAnterior" type="xsd:date" />
+            <xsd:element minOccurs="0" name="fechaVtoActual" type="xsd:date" />
+            <xsd:element name="vigenciaDesde" type="xsd:string" />
+            <xsd:element name="vigenciaHasta" type="xsd:string" />
+            <xsd:element name="formaPago" type="ns1:codDescStringType" />
+            <xsd:element name="cuentaDebito" type="xsd:string" />
+            <xsd:element name="tipoCuentaDebito" type="ns1:codDescStringType" />
+            <xsd:element name="esPreembozado" type="xsd:string" />
+            <xsd:element name="renovacionBonificada" type="xsd:string" />
+            <xsd:element name="tasas">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="efectivaMensualPesos" />
+                  <xsd:element name="efectivaMensualDolares" />
+                  <xsd:element name="nominalAnualPesos" />
+                  <xsd:element name="nominalAnualDolares" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="offLine">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="limiteCompra" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" name="limiteFinanciacion" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" name="limitePrestamo" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" name="limiteDisponible" type="xsd:decimal" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

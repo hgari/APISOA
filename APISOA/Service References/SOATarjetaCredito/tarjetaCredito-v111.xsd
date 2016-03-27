@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/generarSolAdicionalTC-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/generarSolAdicionalTC-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataGenerarSolAdicionalTCReqType">
+    <xsd:sequence>
+      <xsd:element name="personas">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="persona">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="apellido" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="tipoTitularidad" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="mancomuna" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" name="estadoCivil" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="sexo" type="ns1:idSexoType" />
+                  <xsd:element minOccurs="0" name="tipoPersona">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:length value="1" />
+                        <xsd:enumeration value="F" />
+                        <xsd:enumeration value="J" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="fechaNacimiento" type="xsd:date" />
+                  <xsd:element minOccurs="0" name="telefonoParticular" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="telefonoCelular" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="email" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="idNacionalidad" type="xsd:string" />
+                  <xsd:element name="documentos">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="identificador" type="ns1:IdClienteType" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="usuarioLogueado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataGenerarSolAdicionalTCRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Solicitud">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="fecha" type="xsd:date" />
+                  <xsd:element minOccurs="0" name="numero" type="xsd:int" />
+                  <xsd:element minOccurs="0" name="usuario" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="sucursal">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="id" type="xsd:int" />
+                        <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+                        <xsd:element minOccurs="0" name="zonaID" type="xsd:int" />
+                        <xsd:element minOccurs="0" name="regionID" type="xsd:int" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="estado" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="rechazo" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="personas">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="persona">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+                              <xsd:element minOccurs="0" name="apellido" type="xsd:string" />
+                              <xsd:element minOccurs="0" name="documentos">
+                                <xsd:complexType>
+                                  <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" name="identificador" type="ns1:IdClienteType" />
+                                  </xsd:sequence>
+                                </xsd:complexType>
+                              </xsd:element>
+                              <xsd:element minOccurs="0" name="control">
+                                <xsd:complexType>
+                                  <xsd:sequence>
+                                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="controles">
+                                      <xsd:complexType>
+                                        <xsd:sequence>
+                                          <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+                                          <xsd:element minOccurs="0" name="semaforo" type="xsd:int" />
+                                          <xsd:element minOccurs="0" name="mensaje" type="xsd:string" />
+                                          <xsd:element minOccurs="0" name="ejecucion" type="xsd:boolean" />
+                                          <xsd:element minOccurs="0" name="excepcion" type="xsd:boolean" />
+                                        </xsd:sequence>
+                                      </xsd:complexType>
+                                    </xsd:element>
+                                  </xsd:sequence>
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="taskURL" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqGenerarSolAdicionalTC">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataGenerarSolAdicionalTCReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespGenerarSolAdicionalTC">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataGenerarSolAdicionalTCRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

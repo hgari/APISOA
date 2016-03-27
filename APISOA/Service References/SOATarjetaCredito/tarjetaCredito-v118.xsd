@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqAltaInstantaneaMaster">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaInstantaneaMasterReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespAltaInstantaneaMaster">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaInstantaneaMasterRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataAltaInstantaneaMasterReqType">
+    <xsd:sequence>
+      <xsd:element name="operacion" type="xsd:integer" />
+      <xsd:element name="principal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="marca" type="xsd:integer" />
+            <xsd:element name="entidad" type="xsd:integer" />
+            <xsd:element name="codigoProducto" type="xsd:integer" />
+            <xsd:element name="cuentaBantotal" type="xsd:integer" />
+            <xsd:element name="identificador" type="ns1:IdClienteType" />
+            <xsd:element name="tribuDocuTipo" type="xsd:integer" />
+            <xsd:element name="tribuDocuNume" type="xsd:string" />
+            <xsd:element name="registroAltaBATCH">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="fechaMovimiento" type="xsd:integer" />
+                  <xsd:element name="sucursal" type="xsd:integer" />
+                  <xsd:element name="apellidoYNombre" type="xsd:string" />
+                  <xsd:element name="calleYNumero" type="xsd:string" />
+                  <xsd:element name="piso" type="xsd:string" />
+                  <xsd:element name="departamento" type="xsd:string" />
+                  <xsd:element name="codigoPostal" type="xsd:integer" />
+                  <xsd:element name="localidad" type="xsd:string" />
+                  <xsd:element name="codProvincia" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="telefono" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="codCedula" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="numCedula" type="xsd:integer" />
+                  <xsd:element name="codDocumento" type="xsd:string" />
+                  <xsd:element name="numDocumento" type="xsd:integer" />
+                  <xsd:element name="fechaNacimiento" type="xsd:integer" />
+                  <xsd:element name="nacionalidad" type="xsd:string" />
+                  <xsd:element name="sexo" type="xsd:string" />
+                  <xsd:element name="duracionTarjeta" type="xsd:integer" />
+                  <xsd:element name="limiteCompra" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="limiteCredito" type="xsd:integer" />
+                  <xsd:element name="plazoPagoMinimo" type="xsd:integer" />
+                  <xsd:element name="formaPagoTipo" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="formaPagoDB" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="formaPagoCTA" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="formaPagoSUC" type="xsd:integer" />
+                  <xsd:element name="cantCuotas" type="xsd:int" />
+                  <xsd:element name="porcentajeBonificacion" type="xsd:int" />
+                  <xsd:element name="mantenimientoBonificacion" type="xsd:int" />
+                  <xsd:element name="grupoCtaCte" type="xsd:int" />
+                  <xsd:element name="garantia" type="xsd:int" />
+                  <xsd:element name="ocupacion" type="xsd:int" />
+                  <xsd:element name="tipoDomicilio" type="xsd:string" />
+                  <xsd:element name="grupoAfinidad">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="codigo" type="xsd:integer" />
+                        <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="bonifCredito" type="xsd:integer" />
+                  <xsd:element name="cuit" type="xsd:integer" />
+                  <xsd:element name="categoria" type="xsd:integer" />
+                  <xsd:element name="coeficienteLimiteCompra">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="3" />
+                        <xsd:fractionDigits value="2" />
+                        <xsd:maxInclusive value="9.99" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="coeficienteAdelanto">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="3" />
+                        <xsd:fractionDigits value="2" />
+                        <xsd:maxInclusive value="9.99" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="modeloAutorizacion" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="modeloLiquidacion" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="subModeloTasas" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="subModeloCargosSeguros" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="subModeloParametros" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="numeroCBU" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="codProducto" type="xsd:integer" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="usuarioCarga" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataAltaInstantaneaMasterRespType">
+    <xsd:sequence>
+      <xsd:element name="codigoResolucion" type="xsd:int" />
+      <xsd:element name="descripcion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="error">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="solicitud">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigoResolucion" type="xsd:int" />
+            <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+            <xsd:element name="numSolicitud" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="cuenta" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="tarjeta" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="vencimiento" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="cvc" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="error">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="codigo" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://www.supervielle.com.ar/xsd/Integracion/Header-v1" xmlns:ns3="http://www.supervielle.com.ar/xsd/servicios/integracion/exception-v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" xmlns:tns="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:ns4="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" targetNamespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="TarjetaCreditoBinding_v1.1" originalBindingStyle="document" />
+        <binding hasEncoding="false" imported="true" name="TarjetaCreditoBinding_v1.2" originalBindingStyle="document" />
+        <binding hasEncoding="false" imported="true" name="TarjetaCreditoBinding" originalBindingStyle="document" />
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:import namespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" location="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+  </wsdl:types>
+  <wsdl:binding name="TarjetaCreditoBinding" type="ns4:TarjetaCreditoPortType_v1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultaListado">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaListado" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaListado" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaListado" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaClubSupervielle">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaClubSupervielle" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaClubSupervielle" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaClubSupervielle" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaAdicionales">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaAdicionales" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaAdicionales" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaAdicionales" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaHistorialPago">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaHistorialPago" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaHistorialPago" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaHistorialPago" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalle">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaDetalle" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaDetalle" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaDetalle" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaLimites">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaLimites" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaLimites" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaLimites" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaPlafond">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaPlafond" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaPlafond" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaPlafond" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaMovimientos">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaMovimientos" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaMovimientos" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaMovimientos" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstado">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaEstado" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaEstTarjeta" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaEstTarjeta" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="altaTitular">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/altaTitular" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAltaTitular" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAltaTitular" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="altaAdicional">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/altaAdicional" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAltaAdicional" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAltaAdicional" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametros">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaParametros" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaParametros" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaParametros" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosMulti">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaParametrosMulti" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaParametrosMulti" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaParametrosMulti" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoxCliente">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaEstadoxCliente" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaEstadoxCliente" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaEstadoxCliente" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTarjetaBatch">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqActualizaTarjetaBatch" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespActualizaTarjetaBatch" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaUltimoResumen">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumen-v1" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaUltimoResumen" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaUltimoResumen" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaUltDetalleLiquidacion">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacion-v1" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaUltDetalleLiquidacion" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaUltDetalleLiquidacion" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaCabeceraResumen">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaCabeceraResumen-v1" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaCabeceraResumen" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaCabeceraResumen" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="altaInstantaneaMaster">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAltaInstantaneaMaster" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAltaInstantaneaMaster" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="altaInstantaneaVisa">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito-v1/altaInstantaneaVisa" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAltaInstantaneaVisa" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAltaInstantaneaVisa" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoAltaInstantaneaMaster">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito-v1/consultaEstadoAltaInstantaneaMaster" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaEstadoAltaInstantaneaMaster" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaEstadoAltaInstantaneaMaster" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosxMarca">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito-v1/consultaParametrosxMarca" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaParametrosxMarca" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaParametrosxMarca" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosMultixMarca">
+      <soap:operation soapAction="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito-v1/consultaParametrosMultixMarca" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaParametrosMultixMarca" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaParametrosMultixMarca" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="asignaLimiteExcepcionVisa">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/Integracion/tarjetaCredito-v1/asignaLimiteExcepcionVisa" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAsignaLimiteExcepcionVisa" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAsignaLimiteExcepcionVisa" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="altaAdelantoMaster">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/Integracion/tarjetaCredito-v1/altaAdelantoMaster" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqAltaAdelantoMaster" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespAltaAdelantoMaster" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TarjetaCreditoBinding_v1.1" type="ns4:TarjetaCreditoPortType_v1.1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultaListado">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaListado" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaListado_v1.1" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaListado_v1.1" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TarjetaCreditoBinding_v1.2" type="ns4:TarjetaCreditoPortType_v1.2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultaListado">
+      <soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1/consultaListado" />
+      <wsdl:input>
+        <soap:body use="literal" parts="entrada" />
+        <soap:header message="ns4:ReqConsultaListado_v1.2" part="header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="salida" />
+        <soap:header message="ns4:RespConsultaListado_v1.2" part="header" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="soaException">
+        <soap:fault use="literal" name="soaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TarjetaCredito">
+    <wsdl:port name="TarjetaCreditoSvc" binding="ns4:TarjetaCreditoBinding">
+      <soap:address location="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" />
+    </wsdl:port>
+    <wsdl:port name="TarjetaCreditoSvc_v1.1" binding="ns4:TarjetaCreditoBinding_v1.1">
+      <soap:address location="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1.1" />
+    </wsdl:port>
+    <wsdl:port name="TarjetaCreditoSvc_v1.2" binding="ns4:TarjetaCreditoBinding_v1.2">
+      <soap:address location="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

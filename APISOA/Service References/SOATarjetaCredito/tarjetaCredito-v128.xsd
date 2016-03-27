@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaMovimientos-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaMovimientos-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqConsultaMovimientos">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaMovimientosReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespConsultaMovimientos">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaMovimientosRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataConsultaMovimientosReqType">
+    <xsd:sequence>
+      <xsd:element name="identificador" type="ns1:IdTarjetaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataConsultaMovimientosRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="identificador" type="ns1:IdTarjetaType" />
+            <xsd:element minOccurs="0" name="fecha" type="xsd:date" />
+            <xsd:element name="descripcion" type="xsd:string" />
+            <xsd:element name="tipoTransaccion" type="ns1:codDescStringType" />
+            <xsd:element name="moneda" type="xsd:string" />
+            <xsd:element minOccurs="0" name="importe" type="xsd:decimal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

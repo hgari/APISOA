@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaVisa-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaVisa-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataAltaInstantaneaVisaReqType">
+    <xsd:sequence>
+      <xsd:element name="codOperacion" type="xsd:int" />
+      <xsd:element name="Principal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codMarca" type="xsd:int" />
+            <xsd:element name="numEntidad" type="xsd:int" />
+            <xsd:element name="tipoDoc" type="xsd:int" />
+            <xsd:element name="nroDoc" type="xsd:int" />
+            <xsd:element name="tipoDocTribu" type="xsd:int" />
+            <xsd:element name="numDocTribu" type="xsd:string" />
+            <xsd:element name="cuentaBanTotal" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Filiatorios">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nomCliente" type="xsd:string" />
+            <xsd:element name="codNacionalidad" type="xsd:int" />
+            <xsd:element name="nomEmbozado" type="xsd:string" />
+            <xsd:element name="codEstadoCivil" type="xsd:int" />
+            <xsd:element name="nombreCuenta" type="xsd:string" />
+            <xsd:element name="situacionIva" type="xsd:int" />
+            <xsd:element name="fechaNacimiento" type="xsd:date" />
+            <xsd:element name="sexo" type="ns1:idSexoType" />
+            <xsd:element name="codOcupacion" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Domicilios">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="Domicilio">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="codDomicilio" type="xsd:int" />
+                  <xsd:element name="calle" type="xsd:string" />
+                  <xsd:element name="puerta" type="xsd:string" />
+                  <xsd:element name="piso" type="xsd:string" />
+                  <xsd:element name="dpto" type="xsd:string" />
+                  <xsd:element name="localidad" type="xsd:string" />
+                  <xsd:element name="codPostal" type="xsd:int" />
+                  <xsd:element name="tel" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="tipo" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Producto">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codGrupoAfinidad" type="xsd:int" />
+            <xsd:element name="tipoTarjeta" type="xsd:int" />
+            <xsd:element name="planSueldo" type="xsd:int" />
+            <xsd:element name="empresa" type="xsd:int" />
+            <xsd:element name="codPaquete" type="xsd:int" />
+            <xsd:element name="tipoCartera" type="xsd:int" />
+            <xsd:element name="codProducto" type="xsd:int" />
+            <xsd:element name="habilitacionATM" type="xsd:string" />
+            <xsd:element name="modeloLiquidacion" type="xsd:int" />
+            <xsd:element name="cantCuotas" type="xsd:string" />
+            <xsd:element name="bonificacionPrimerAnio" type="xsd:string" />
+            <xsd:element name="bonificacionSegundoAnio" type="xsd:string" />
+            <xsd:element name="codVigencia" type="xsd:string" />
+            <xsd:element name="formaPago" type="xsd:string" />
+            <xsd:element minOccurs="0" name="debito" type="xsd:int" />
+            <xsd:element minOccurs="0" name="sucCuentaDebito" type="xsd:int" />
+            <xsd:element name="limiteCompra" type="xsd:decimal" />
+            <xsd:element name="garante" type="xsd:int" />
+            <xsd:element name="limitePrestamo" type="xsd:decimal" />
+            <xsd:element name="numCuentaBanca" type="xsd:string" />
+            <xsd:element name="porcenLimAdel" type="xsd:int" />
+            <xsd:element name="mantieneBonificacion" type="xsd:string" />
+            <xsd:element name="bonificacionCajero" type="xsd:int" />
+            <xsd:element name="plazoPagoMin" type="xsd:int" />
+            <xsd:element minOccurs="0" name="ctaPaquetesSucursal" type="xsd:int" />
+            <xsd:element name="ctaBancaTipo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Complementarios">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ctaPaquete" type="xsd:int" />
+            <xsd:element name="codResponsableCta" type="xsd:string" />
+            <xsd:element minOccurs="0" name="sucCuenta" type="xsd:int" />
+            <xsd:element name="usuarioCarga" type="xsd:string" />
+            <xsd:element name="veraz" type="xsd:int" />
+            <xsd:element name="fechaSolicitud" type="xsd:date" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Limites">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="novedad">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element maxOccurs="unbounded" name="Limite">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="tipoExcepcion" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="montoExcepcion">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:decimal">
+                        <xsd:maxInclusive value="9999999999.99" />
+                        <xsd:totalDigits value="12" />
+                        <xsd:fractionDigits value="2" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataAltaInstantaneaVisaRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigoResolucion" type="xsd:int" />
+            <xsd:element name="descripcion" type="xsd:string" />
+            <xsd:element minOccurs="0" name="error">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="codigo" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="solicitud">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="numSolicitud" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="cuenta" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="tarjeta" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="vencimiento" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="cvc" type="xsd:integer" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqAltaInstantaneaVisa">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaInstantaneaVisaReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespAltaInstantaneaVisa">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaInstantaneaVisaRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

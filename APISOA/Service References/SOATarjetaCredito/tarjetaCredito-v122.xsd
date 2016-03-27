@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMulti-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMulti-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqConsultaParametrosMulti">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosMultiReq" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespConsultaParametrosMulti">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosMultiResp" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataConsultaParametrosMultiReq">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="DatosLlamada">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Filiatorios" type="xsd:string" />
+            <xsd:element name="Operacion" type="xsd:int" />
+            <xsd:element name="Principal">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="InterCodi" type="xsd:int" />
+                  <xsd:element name="ProducCodi" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="Complementarios" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataConsultaParametrosMultiResp">
+    <xsd:sequence>
+      <xsd:element name="Respuestas">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="Respuesta" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

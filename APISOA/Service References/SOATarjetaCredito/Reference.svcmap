@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="abdf8bb2-7760-476f-b0c1-3382f6ad84e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="tarjetaCredito-v1.xsd" MetadataType="Schema" ID="f59da1b9-1eca-4beb-84f4-ae42ee346982" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd29" />
+    <MetadataFile FileName="tarjetaCredito-v11.xsd" MetadataType="Schema" ID="2e72fc25-b67e-4132-a265-f262c4e6ca07" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd4" />
+    <MetadataFile FileName="tarjetaCredito-v12.xsd" MetadataType="Schema" ID="d8d14817-1315-4c68-930c-f7d78d873a79" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd1" />
+    <MetadataFile FileName="tarjetaCredito-v13.xsd" MetadataType="Schema" ID="cb27b212-3b37-43fe-a9b2-64a8f06a4b39" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd3" />
+    <MetadataFile FileName="tarjetaCredito-v14.xsd" MetadataType="Schema" ID="c1272f94-2b1b-4305-85bb-95e59aba2709" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd11" />
+    <MetadataFile FileName="tarjetaCredito-v1.wsdl" MetadataType="Wsdl" ID="dfee8878-0157-42a2-9eca-f99c1871ed7a" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?wsdl=wsdl0" />
+    <MetadataFile FileName="tarjetaCredito-v15.xsd" MetadataType="Schema" ID="925ec09e-0065-4ae1-ae46-d94da0200b62" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd9" />
+    <MetadataFile FileName="tarjetaCredito-v16.xsd" MetadataType="Schema" ID="9cbd75d1-5f63-4600-957d-02c8ff5348a8" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" />
+    <MetadataFile FileName="tarjetaCredito-v17.xsd" MetadataType="Schema" ID="5e8381fa-030c-46ca-a846-26c9581e7d86" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd2" />
+    <MetadataFile FileName="tarjetaCredito-v18.xsd" MetadataType="Schema" ID="3e8cdaea-f874-43c8-a55c-b6c6b01aa488" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd7" />
+    <MetadataFile FileName="tarjetaCredito-v19.xsd" MetadataType="Schema" ID="1de63ec5-9488-4a1b-aab0-500049089853" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd28" />
+    <MetadataFile FileName="tarjetaCredito-v110.xsd" MetadataType="Schema" ID="ae0c7eee-1a4b-4c6f-90d1-5b2080c529d4" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd8" />
+    <MetadataFile FileName="tarjetaCredito-v111.xsd" MetadataType="Schema" ID="667e3f49-ed72-4f03-803a-c59c6831366c" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd26" />
+    <MetadataFile FileName="tarjetaCredito-v112.xsd" MetadataType="Schema" ID="417e19cf-1812-414a-90e9-fd4bcd691baf" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd27" />
+    <MetadataFile FileName="tarjetaCredito-v113.xsd" MetadataType="Schema" ID="42a2290b-99d1-4ecb-b3ee-789c36972340" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd24" />
+    <MetadataFile FileName="tarjetaCredito-v114.xsd" MetadataType="Schema" ID="a3e42ce8-bcb9-4419-857f-359d87e09603" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd25" />
+    <MetadataFile FileName="tarjetaCredito-v115.xsd" MetadataType="Schema" ID="c09b1969-7464-4c04-ad8e-ab3adff5702b" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd22" />
+    <MetadataFile FileName="tarjetaCredito-v116.xsd" MetadataType="Schema" ID="39931720-67bf-4858-8917-94539ea66e08" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd23" />
+    <MetadataFile FileName="tarjetaCredito-v117.xsd" MetadataType="Schema" ID="56499ed7-d663-4d95-a2f7-586d1714dfa0" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd20" />
+    <MetadataFile FileName="tarjetaCredito-v118.xsd" MetadataType="Schema" ID="632ce7fa-17cc-4f01-8314-a1f00e3afd36" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd21" />
+    <MetadataFile FileName="tarjetaCredito-v119.xsd" MetadataType="Schema" ID="e0724579-c211-414b-b945-7d3731a01f24" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd6" />
+    <MetadataFile FileName="tarjetaCredito-v120.xsd" MetadataType="Schema" ID="d75bc741-3cd9-4602-ba69-a33b41bc6212" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd18" />
+    <MetadataFile FileName="tarjetaCredito-v121.xsd" MetadataType="Schema" ID="89031ecf-9ba9-4ac3-a018-6978958bbb06" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd19" />
+    <MetadataFile FileName="tarjetaCredito-v122.xsd" MetadataType="Schema" ID="91792022-e3a2-4df4-a898-97e8e1743a88" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd16" />
+    <MetadataFile FileName="tarjetaCredito-v123.xsd" MetadataType="Schema" ID="499ec18f-374f-4d95-88c1-7f655c3c86ef" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd17" />
+    <MetadataFile FileName="tarjetaCredito-v124.xsd" MetadataType="Schema" ID="dca47c1a-1486-49e6-a0e7-4d02b6852f42" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd14" />
+    <MetadataFile FileName="tarjetaCredito-v125.xsd" MetadataType="Schema" ID="906e718f-4c58-4fa6-a63a-a22be4053b0c" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd15" />
+    <MetadataFile FileName="tarjetaCredito-v126.xsd" MetadataType="Schema" ID="adce9b9b-600d-4dca-bb13-b74d5caaed7d" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd12" />
+    <MetadataFile FileName="tarjetaCredito-v127.xsd" MetadataType="Schema" ID="26b6c498-dee2-4529-a78e-8cecd6576355" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd13" />
+    <MetadataFile FileName="tarjetaCredito-v128.xsd" MetadataType="Schema" ID="c3ea026d-03f4-406b-98d7-7fc4811b2475" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd10" />
+    <MetadataFile FileName="tarjetaCredito-v129.xsd" MetadataType="Schema" ID="0bad7aca-8e3c-4bb4-886e-f0cb58c7e116" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd0" />
+    <MetadataFile FileName="tarjetaCredito-v11.wsdl" MetadataType="Wsdl" ID="9b21613c-3e6b-46c2-a2ed-3e6b76b865fd" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?wsdl" />
+    <MetadataFile FileName="tarjetaCredito-v130.xsd" MetadataType="Schema" ID="87c0c1f1-e111-4155-b5b8-9a7159c33ad0" SourceId="1" SourceUrl="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

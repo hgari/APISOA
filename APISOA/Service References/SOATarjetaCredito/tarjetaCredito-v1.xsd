@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdelantoMaster-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdelantoMaster-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataAltaAdelantoMasterReqType">
+    <xsd:sequence>
+      <xsd:element name="operacion" type="xsd:integer" />
+      <xsd:element name="principal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="marca" type="xsd:integer" />
+            <xsd:element name="entidad" type="xsd:integer" />
+            <xsd:element name="datosTarjeta">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="numero" type="xsd:string" />
+                  <xsd:element name="mesVencimiento">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="2" />
+                        <xsd:maxLength value="2" />
+                        <xsd:pattern value="\d{2}" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="anoVencimiento">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="2" />
+                        <xsd:maxLength value="2" />
+                        <xsd:pattern value="\d{2}" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="tarjetaCVC" type="xsd:integer" />
+            <xsd:element name="moneda" type="xsd:integer" />
+            <xsd:element name="capital" type="xsd:decimal" />
+            <xsd:element name="cantCuotas" type="xsd:integer" />
+            <xsd:element name="linea" type="xsd:string" />
+            <xsd:element name="usuarioCarga" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataAltaAdelantoMasterRespType">
+    <xsd:sequence>
+      <xsd:element name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigoResolucion" type="xsd:int" />
+            <xsd:element name="descripcion" type="xsd:string" />
+            <xsd:element minOccurs="0" name="numSolicitud" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="error">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="codigo" type="xsd:integer" />
+                  <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqAltaAdelantoMaster">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaAdelantoMasterReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespAltaAdelantoMaster">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaAdelantoMasterRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

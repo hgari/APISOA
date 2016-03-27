@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns11="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaTarjeta-v1" xmlns:ns3="http://www.supervielle.com.ar/xsd/servicios/integracion/exception-v1" xmlns:ns12="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstTarjeta-v1" xmlns:ns4="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1" xmlns:ns22="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumenMAS-v1" xmlns:ns5="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaAdicionales-v1" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:nsConsultaEstadoAltaInstantaneaMaster="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstadoAltaInstantaneaMaster-v1" xmlns:ns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaClubSupervielle-v1" xmlns:ns7="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaDetalle-v1" xmlns:ns8="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaLimites-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" xmlns:ns21="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumenVISA-v1" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns26="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacionVISA-v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns17="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMulti-v1" xmlns:ns27="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaCabeceraResumen-v1" xmlns:nsGenerarSolAdicionalTC="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/generarSolAdicionalTC-v1" xmlns:nsAltaAdelantoMaster="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdelantoMaster-v1" xmlns:ns10="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaPlafond-v1" xmlns:ns20="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.1" xmlns:ns25="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacion-v1" xmlns:nsAsignaLimiteExcepcionVisa="http://www.supervielle.com.ar/xsd/integracion/tarjetaCredito/asignaLimiteExcepcionVisa-v1" xmlns:ns16="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametros-v1" xmlns:ns29="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.2" xmlns:ns9="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaMovimientos-v1" xmlns:ns6="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaHistorialPago-v1" xmlns:nsConsultaParametrosxMarca="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosxMarca-v1" xmlns:ns24="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumen-v1" xmlns:nsConsultaParametrosMultixMarca="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMultixMarca-v1" xmlns:ns15="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdicional-v1" xmlns:ns28="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" xmlns:nsAltaInstantaneaVisa="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaVisa-v1" xmlns:ns19="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns13="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstado-v1" xmlns:ns2="http://www.supervielle.com.ar/xsd/Integracion/Header-v1" xmlns:ns23="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacionMAS-v1" xmlns:tns="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:ns14="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaTitular-v1" xmlns:ns18="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstadoxCliente-v1" targetNamespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true" />
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:ns10="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaMovimientos-v1" xmlns:ns23="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumenMAS-v1" xmlns:ns15="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaTitular-v1" xmlns:ns5="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaClubSupervielle-v1" xmlns:ns17="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametros-v1" xmlns:ns19="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstadoxCliente-v1" xmlns:ns28="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaCabeceraResumen-v1" xmlns:ns24="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacionMAS-v1" xmlns:ns26="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacion-v1" xmlns:ns29="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" xmlns:ns20="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" xmlns:ns7="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaHistorialPago-v1" xmlns:ns22="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumenVISA-v1" xmlns:ns9="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaLimites-v1" xmlns:ns11="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaPlafond-v1" xmlns:ns14="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstado-v1" xmlns:ns27="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacionVISA-v1" xmlns:ns13="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstTarjeta-v1" xmlns:ns16="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdicional-v1" xmlns:ns18="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMulti-v1" xmlns:ns8="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaDetalle-v1" xmlns:ns6="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaAdicionales-v1" xmlns:ns30="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.2" xmlns:ns25="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumen-v1" xmlns:ns21="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.1" attributeFormDefault="unqualified" elementFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd0" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaCabeceraResumen-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd1" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltimoResumen-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd2" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaClubSupervielle-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd3" namespace="http://www.supervielle.com.ar/xsd/Integracion/Header-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd4" namespace="http://www.supervielle.com.ar/xsd/servicios/integracion/exception-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd5" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd6" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaAdicionales-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd7" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaHistorialPago-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd8" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaDetalle-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd9" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaLimites-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd10" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaMovimientos-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd11" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaPlafond-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd12" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstado-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd13" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaTitular-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd14" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdicional-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd15" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametros-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd16" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMulti-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd17" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstadoxCliente-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd18" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/actualizaTarjetaBatch-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd19" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd20" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaUltDetalleLiquidacion-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd21" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaMaster-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd22" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaInstantaneaVisa-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd23" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaEstadoAltaInstantaneaMaster-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd24" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosxMarca-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd25" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMultixMarca-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd26" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/generarSolAdicionalTC-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd27" namespace="http://www.supervielle.com.ar/xsd/integracion/tarjetaCredito/asignaLimiteExcepcionVisa-v1" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd28" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.2" />
+      <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd29" namespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdelantoMaster-v1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="exception" element="ns3:exception" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaListado">
+    <wsdl:part name="entrada" element="ns4:ReqConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaListado">
+    <wsdl:part name="salida" element="ns4:RespConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaClubSupervielle">
+    <wsdl:part name="entrada" element="ns:ReqConsultaClubSupervielle" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaClubSupervielle">
+    <wsdl:part name="salida" element="ns:RespConsultaClubSupervielle" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaAdicionales">
+    <wsdl:part name="entrada" element="ns5:ReqConsultaAdicionales" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaAdicionales">
+    <wsdl:part name="salida" element="ns5:RespConsultaAdicionales" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaHistorialPago">
+    <wsdl:part name="entrada" element="ns6:ReqConsultaHistorialPago" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaHistorialPago">
+    <wsdl:part name="salida" element="ns6:RespConsultaHistorialPago" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaDetalle">
+    <wsdl:part name="entrada" element="ns7:ReqConsultaDetalle" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaDetalle">
+    <wsdl:part name="salida" element="ns7:RespConsultaDetalle" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaLimites">
+    <wsdl:part name="entrada" element="ns8:ReqConsultaLimites" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaLimites">
+    <wsdl:part name="salida" element="ns8:RespConsultaLimites" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaPlafond">
+    <wsdl:part name="entrada" element="ns10:ReqConsultaPlafond" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaPlafond">
+    <wsdl:part name="salida" element="ns10:RespConsultaPlafond" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaMovimientos">
+    <wsdl:part name="entrada" element="ns9:ReqConsultaMovimientos" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaMovimientos">
+    <wsdl:part name="salida" element="ns9:RespConsultaMovimientos" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaEstTarjeta">
+    <wsdl:part name="entrada" element="ns13:ReqConsultaEstTarjeta" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaEstTarjeta">
+    <wsdl:part name="salida" element="ns13:RespConsultaEstTarjeta" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqActualizaTarjetaBatch">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns19:ReqActualizaTarjetaBatch" />
+  </wsdl:message>
+  <wsdl:message name="ReqAltaTitular">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns14:ReqAltaTitular" />
+  </wsdl:message>
+  <wsdl:message name="ReqAltaAdicional">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns15:ReqAltaAdicional" />
+  </wsdl:message>
+  <wsdl:message name="RespAltaAdicional">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns15:RespAltaAdicional" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaParametros">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns16:ReqConsultaParametros" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaParametros">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns16:RespConsultaParametros" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaParametrosMulti">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns17:ReqConsultaParametrosMulti" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaParametrosMulti">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns17:RespConsultaParametrosMulti" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaEstadoxCliente">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns18:ReqConsultaEstadoxCliente" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaEstadoxCliente">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns18:RespConsultaEstadoxCliente" />
+  </wsdl:message>
+  <wsdl:message name="RespActualizaTarjetaBatch">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns19:RespActualizaTarjetaBatch" />
+  </wsdl:message>
+  <wsdl:message name="RespAltaTitular">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns14:RespAltaTitular" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaListado_v1.1">
+    <wsdl:part name="entrada" element="ns20:ReqConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaListado_v1.1">
+    <wsdl:part name="salida" element="ns20:RespConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaUltimoResumen">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns24:ReqConsultaUltimoResumen" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaUltimoResumen">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns24:RespConsultaUltimoResumen" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaUltDetalleLiquidacion">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns25:ReqConsultaUltDetalleLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaUltDetalleLiquidacion">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns25:RespConsultaUltDetalleLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaCabeceraResumen">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns27:ReqConsultaCabeceraResumen" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaCabeceraResumen">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns27:RespConsultaCabeceraResumen" />
+  </wsdl:message>
+  <wsdl:message name="ReqAltaInstantaneaMaster">
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+    <wsdl:part name="entrada" element="ns28:ReqAltaInstantaneaMaster" />
+  </wsdl:message>
+  <wsdl:message name="RespAltaInstantaneaMaster">
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+    <wsdl:part name="salida" element="ns28:RespAltaInstantaneaMaster" />
+  </wsdl:message>
+  <wsdl:message name="ReqAltaInstantaneaVisa">
+    <wsdl:part name="entrada" element="nsAltaInstantaneaVisa:ReqAltaInstantaneaVisa" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespAltaInstantaneaVisa">
+    <wsdl:part name="salida" element="nsAltaInstantaneaVisa:RespAltaInstantaneaVisa" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaEstadoAltaInstantaneaMaster">
+    <wsdl:part name="entrada" element="nsConsultaEstadoAltaInstantaneaMaster:ReqConsultaEstadoAltaInstantaneaMaster" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaEstadoAltaInstantaneaMaster">
+    <wsdl:part name="salida" element="nsConsultaEstadoAltaInstantaneaMaster:RespConsultaEstadoAltaInstantaneaMaster" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaParametrosxMarca">
+    <wsdl:part name="entrada" element="nsConsultaParametrosxMarca:ReqConsultaParametrosxMarca" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaParametrosxMarca">
+    <wsdl:part name="salida" element="nsConsultaParametrosxMarca:RespConsultaParametrosxMarca" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaParametrosMultixMarca">
+    <wsdl:part name="entrada" element="nsConsultaParametrosMultixMarca:ReqConsultaParametrosMultixMarca" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaParametrosMultixMarca">
+    <wsdl:part name="salida" element="nsConsultaParametrosMultixMarca:RespConsultaParametrosMultixMarca" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqAsignaLimiteExcepcionVisa">
+    <wsdl:part name="entrada" element="nsAsignaLimiteExcepcionVisa:ReqAsignaLimiteExcepcionVisa" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespAsignaLimiteExcepcionVisa">
+    <wsdl:part name="salida" element="nsAsignaLimiteExcepcionVisa:RespAsignaLimiteExcepcionVisa" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="RespConsultaListado_v1.2">
+    <wsdl:part name="salida" element="ns29:RespConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:message name="ReqConsultaListado_v1.2">
+    <wsdl:part name="entrada" element="ns29:ReqConsultaListado" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="NewMessage" />
+  <wsdl:message name="NewMessage2" />
+  <wsdl:message name="NewMessage3" />
+  <wsdl:message name="ReqAltaAdelantoMaster">
+    <wsdl:part name="entrada" element="nsAltaAdelantoMaster:ReqAltaAdelantoMaster" />
+    <wsdl:part name="header" element="ns2:soapHeaderReq" />
+  </wsdl:message>
+  <wsdl:message name="RespAltaAdelantoMaster">
+    <wsdl:part name="salida" element="nsAltaAdelantoMaster:RespAltaAdelantoMaster" />
+    <wsdl:part name="header" element="ns2:soapHeaderRes" />
+  </wsdl:message>
+  <wsdl:portType name="TarjetaCreditoPortType_v1">
+    <wsdl:operation name="consultaListado">
+      <wsdl:input message="tns:ReqConsultaListado" />
+      <wsdl:output message="tns:RespConsultaListado" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaClubSupervielle">
+      <wsdl:input message="tns:ReqConsultaClubSupervielle" />
+      <wsdl:output message="tns:RespConsultaClubSupervielle" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaAdicionales">
+      <wsdl:input message="tns:ReqConsultaAdicionales" />
+      <wsdl:output message="tns:RespConsultaAdicionales" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaHistorialPago">
+      <wsdl:input message="tns:ReqConsultaHistorialPago" />
+      <wsdl:output message="tns:RespConsultaHistorialPago" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalle">
+      <wsdl:input message="tns:ReqConsultaDetalle" />
+      <wsdl:output message="tns:RespConsultaDetalle" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaLimites">
+      <wsdl:input message="tns:ReqConsultaLimites" />
+      <wsdl:output message="tns:RespConsultaLimites" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaPlafond">
+      <wsdl:input message="tns:ReqConsultaPlafond" />
+      <wsdl:output message="tns:RespConsultaPlafond" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaMovimientos">
+      <wsdl:input message="tns:ReqConsultaMovimientos" />
+      <wsdl:output message="tns:RespConsultaMovimientos" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstado">
+      <wsdl:input message="tns:ReqConsultaEstTarjeta" />
+      <wsdl:output message="tns:RespConsultaEstTarjeta" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="altaTitular">
+      <wsdl:input message="tns:ReqAltaTitular" />
+      <wsdl:output message="tns:RespAltaTitular" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="altaAdicional">
+      <wsdl:input message="tns:ReqAltaAdicional" />
+      <wsdl:output message="tns:RespAltaAdicional" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametros">
+      <wsdl:input message="tns:ReqConsultaParametros" />
+      <wsdl:output message="tns:RespConsultaParametros" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosMulti">
+      <wsdl:input message="tns:ReqConsultaParametrosMulti" />
+      <wsdl:output message="tns:RespConsultaParametrosMulti" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoxCliente">
+      <wsdl:input message="tns:ReqConsultaEstadoxCliente" />
+      <wsdl:output message="tns:RespConsultaEstadoxCliente" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTarjetaBatch">
+      <wsdl:input message="tns:ReqActualizaTarjetaBatch" />
+      <wsdl:output message="tns:RespActualizaTarjetaBatch" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaUltimoResumen">
+      <wsdl:input message="tns:ReqConsultaUltimoResumen" />
+      <wsdl:output message="tns:RespConsultaUltimoResumen" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaUltDetalleLiquidacion">
+      <wsdl:input message="tns:ReqConsultaUltDetalleLiquidacion" />
+      <wsdl:output message="tns:RespConsultaUltDetalleLiquidacion" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaCabeceraResumen">
+      <wsdl:input message="tns:ReqConsultaCabeceraResumen" />
+      <wsdl:output message="tns:RespConsultaCabeceraResumen" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="altaInstantaneaMaster">
+      <wsdl:input message="tns:ReqAltaInstantaneaMaster" />
+      <wsdl:output message="tns:RespAltaInstantaneaMaster" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="altaInstantaneaVisa">
+      <wsdl:input message="tns:ReqAltaInstantaneaVisa" />
+      <wsdl:output message="tns:RespAltaInstantaneaVisa" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoAltaInstantaneaMaster">
+      <wsdl:input message="tns:ReqConsultaEstadoAltaInstantaneaMaster" />
+      <wsdl:output message="tns:RespConsultaEstadoAltaInstantaneaMaster" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosxMarca">
+      <wsdl:input message="tns:ReqConsultaParametrosxMarca" />
+      <wsdl:output message="tns:RespConsultaParametrosxMarca" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaParametrosMultixMarca">
+      <wsdl:input message="tns:ReqConsultaParametrosMultixMarca" />
+      <wsdl:output message="tns:RespConsultaParametrosMultixMarca" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="asignaLimiteExcepcionVisa">
+      <wsdl:input message="tns:ReqAsignaLimiteExcepcionVisa" />
+      <wsdl:output message="tns:RespAsignaLimiteExcepcionVisa" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="altaAdelantoMaster">
+      <wsdl:input message="tns:ReqAltaAdelantoMaster" />
+      <wsdl:output message="tns:RespAltaAdelantoMaster" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TarjetaCreditoPortType_v1.1">
+    <wsdl:operation name="consultaListado">
+      <wsdl:input message="tns:ReqConsultaListado_v1.1" />
+      <wsdl:output message="tns:RespConsultaListado_v1.1" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TarjetaCreditoPortType_v1.2">
+    <wsdl:operation name="consultaListado">
+      <wsdl:input message="tns:ReqConsultaListado_v1.2" />
+      <wsdl:output message="tns:RespConsultaListado_v1.2" />
+      <wsdl:fault name="soaException" message="tns:FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

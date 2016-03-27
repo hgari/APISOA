@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosxMarca-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosxMarca-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataConsultaParametrosxMarcaReqType">
+    <xsd:sequence>
+      <xsd:element name="operacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="principal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="codMarca" type="xsd:string" />
+            <xsd:element minOccurs="0" name="codParametro" type="xsd:string" />
+            <xsd:element minOccurs="0" name="numEntidad" type="xsd:string" />
+            <xsd:element minOccurs="0" name="tipoCodProc" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataConsultaParametrosxMarcaRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codParametroEntrada" type="xsd:int" />
+            <xsd:element name="codigoResolucion" type="xsd:integer" />
+            <xsd:element minOccurs="0" name="descResolucion" type="xsd:string" />
+            <xsd:element minOccurs="0" name="error">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="codigo" type="xsd:int" />
+                  <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="detalles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element maxOccurs="unbounded" name="detalle">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="codParam" type="xsd:integer" />
+                        <xsd:element minOccurs="0" name="defecto" type="xsd:string" />
+                        <xsd:element minOccurs="0" name="marcaValorParam" type="xsd:string" />
+                        <xsd:element minOccurs="0" name="descParam" type="xsd:string" />
+                        <xsd:element minOccurs="0" name="responseId" type="xsd:string" />
+                        <xsd:element minOccurs="0" name="auxParam1">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" name="codigo" type="xsd:integer" />
+                              <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="auxParam2">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" name="codigo" type="xsd:integer" />
+                              <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="auxParam3">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" name="codigo" type="xsd:integer" />
+                              <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="retCode" type="xsd:integer" />
+                        <xsd:element minOccurs="0" name="errorMsg" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqConsultaParametrosxMarca">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosxMarcaReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespConsultaParametrosxMarca">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosxMarcaRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

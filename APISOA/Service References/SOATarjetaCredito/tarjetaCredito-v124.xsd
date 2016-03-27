@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdicional-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/altaAdicional-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:element name="ReqAltaAdicional">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaAdicionalReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespAltaAdicional">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAltaAdicionalRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DataAltaAdicionalReqType">
+    <xsd:sequence>
+      <xsd:element name="TitularAdicional">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codOperacion" type="xsd:int" />
+            <xsd:element name="Principal">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="codMarca" type="xsd:int" />
+                  <xsd:element name="numEntidad" type="xsd:int" />
+                  <xsd:element name="tipoAlta" type="xsd:int" />
+                  <xsd:element name="cuentaBanTotal" type="xsd:int" />
+                  <xsd:element name="nroSolicitud" type="xsd:integer" />
+                  <xsd:element name="tipoDoc" type="xsd:int" />
+                  <xsd:element name="nroDoc" type="xsd:int" />
+                  <xsd:element name="tipoDocTribu" type="xsd:int" />
+                  <xsd:element name="numDocTribu" type="xsd:string" />
+                  <xsd:element name="porcenLCompra" type="xsd:decimal" />
+                  <xsd:element name="porcenLCCuotas" type="xsd:decimal" />
+                  <xsd:element name="porcenLAdel" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Filiatorios">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="nomCliente" type="xsd:string" />
+                  <xsd:element name="codNacionalidad" type="xsd:int" />
+                  <xsd:element name="nomEmbozado" type="xsd:string" />
+                  <xsd:element name="codEstadoCivil" type="xsd:int" />
+                  <xsd:element name="fechaNacimiento" type="xsd:date" />
+                  <xsd:element name="sexo" type="ns1:idSexoType" />
+                  <xsd:element name="codOcupacion" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Complementarios">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="usuarioCarga" type="xsd:string" />
+                  <xsd:element name="fechaSolicitud" type="xsd:date" />
+                  <xsd:element name="cuentaSocio" type="xsd:integer" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataAltaAdicionalRespType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Row">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Estado" type="ns1:estadoType" />
+            <xsd:element minOccurs="0" name="nroSolicitud" type="xsd:int" />
+            <xsd:element minOccurs="0" name="codigoResolucion" type="ns1:codDescNumType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

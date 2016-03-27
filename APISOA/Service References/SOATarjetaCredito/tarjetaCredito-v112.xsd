@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/integracion/tarjetaCredito/asignaLimiteExcepcionVisa-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/integracion/tarjetaCredito/asignaLimiteExcepcionVisa-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataAsignaLimiteExcepcionVisaReqType">
+    <xsd:sequence>
+      <xsd:element name="nroCuenta">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:maxInclusive value="9999999999" />
+            <xsd:totalDigits value="10" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="nroTarjeta">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:long">
+            <xsd:maxInclusive value="9999999999999999" />
+            <xsd:totalDigits value="16" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="tipoExcepcion">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="novedad">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="fechaVigencia" type="xsd:date" />
+      <xsd:element minOccurs="0" name="montoExcepcion">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal">
+            <xsd:maxInclusive value="9999999999.99" />
+            <xsd:totalDigits value="12" />
+            <xsd:fractionDigits value="2" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataAsignaLimiteExcepcionVisaRespType">
+    <xsd:sequence>
+      <xsd:element name="retorno" type="xsd:string" />
+      <xsd:element name="nroCuenta" type="xsd:integer" />
+      <xsd:element name="nroTarjeta" type="xsd:long" />
+      <xsd:element minOccurs="0" name="fechaVigencia" type="xsd:date" />
+      <xsd:element minOccurs="0" name="montoExcepcion" type="xsd:decimal" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqAsignaLimiteExcepcionVisa">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAsignaLimiteExcepcionVisaReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespAsignaLimiteExcepcionVisa">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataAsignaLimiteExcepcionVisaRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

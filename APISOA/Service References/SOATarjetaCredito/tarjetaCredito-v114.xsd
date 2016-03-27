@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMultixMarca-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaParametrosMultixMarca-v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://dasoa-01:9813/wsdl/servicios/integracion/tarjetaCredito-v1.2?xsd=xsd30" namespace="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" />
+  <xsd:complexType name="DataConsultaParametrosMultixMarcaReqType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="datosLlamada">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="operacion" type="xsd:string" />
+            <xsd:element minOccurs="0" name="principal">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="codMarca" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="codParametro" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="numEntidad" type="xsd:string" />
+                  <xsd:element minOccurs="0" name="tipoCodProc" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DataConsultaParametrosMultixMarcaRespType">
+    <xsd:sequence>
+      <xsd:element name="respuestas">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="respuesta" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReqConsultaParametrosMultixMarca">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosMultixMarcaReqType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RespConsultaParametrosMultixMarca">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Data" type="DataConsultaParametrosMultixMarcaRespType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
